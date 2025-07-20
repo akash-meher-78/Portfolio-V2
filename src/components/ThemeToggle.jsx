@@ -29,7 +29,7 @@ function ThemeToggle() {
     };
 
     return (
-        <button onClick={toggleTheme} className={cn("fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
+        <button onClick={toggleTheme} className={cn("fixed top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
             "focus:outline-hidden"
         )}>
             {darkMode ? (

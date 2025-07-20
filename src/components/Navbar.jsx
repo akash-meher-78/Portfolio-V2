@@ -4,7 +4,6 @@ import { Menu, X } from "lucide-react";
 
 const navItem = [
     { title: "Home", href: "#home" },
-    { title: "About", href: "#about" },
     { title: "Skills", href: "#skills" },
     { title: "Project", href: "#project" },
     { title: "Contact", href: "#contact" },
@@ -16,7 +15,7 @@ function Navbar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScroll(window.scrollY > 10); // Corrected from screenY to scrollY
+            setIsScroll(window.scrollY > 10);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -58,12 +57,12 @@ function Navbar() {
                         ))}
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-4 mr-7">
 
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen((prev) => !prev)}
-                            className="md:hidden p-2 z-50 text-foreground"
+                            className="md:hidden p-2 ml-2 z-50 text-foreground"
                             aria-label={isMenu ? "Close Menu" : "Open Menu"}
                         >
                             {isMenu ? <X size={24} /> : <Menu size={24} />}
@@ -92,6 +91,7 @@ function Navbar() {
                                 {item.title}
                             </a>
                         ))}
+                        
                     </div>
                 </div>
             </nav>
