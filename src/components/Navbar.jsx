@@ -31,21 +31,22 @@ function Navbar() {
                     isScroll
                         ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
                         : "py-5"
-                )}
-            >
+                )}>
                 <div className="container flex items-center justify-between gap-4 px-4 md:px-6">
                     {/* Left: Logo */}
                     <a
                         className="text-xl font-bold text-primary flex items-center"
-                        href="#home"
+                        href=""
                     >
                         <span className="relative z-10">
-                            <span className="text-glow text-foreground">Akash</span>
+                            <span>&lt;</span>
+                            <span className="text-glow text-foreground tracking-[3px]"> Akash </span>
+                            <span>/&gt;</span>
                         </span>
                     </a>
 
                     {/* Center: Desktop Nav */}
-                    <div className="hidden md:flex space-x-8">
+                    <div className="hidden font-semibold md:flex space-x-8">
                         {navItem.map((item, key) => (
                             <a
                                 key={key}
@@ -58,7 +59,7 @@ function Navbar() {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        
+
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMenuOpen((prev) => !prev)}

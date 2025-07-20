@@ -1,3 +1,4 @@
+import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import ThemeToggle from "../components/ThemeToggle";
 
@@ -8,6 +9,9 @@ function Home() {
         {/* Navbar */}
         <Navbar/>
         {/* Main Content */}
+        <main>
+          <HeroSection/>
+        </main>
         {/* Footer */}
     </div>
   )
