@@ -12,6 +12,7 @@ module.exports = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         border: 'hsl(var(--border))',
+        card: 'hsl(var(--card))',
       },
       animation: {
         "fade-in": "fade-in 0.7s ease-out forwards",

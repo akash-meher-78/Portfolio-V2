@@ -58,7 +58,7 @@
   }
 }
 .animate-gradient-x {
-  background: linear-gradient(90deg, #a855f7, #7e22ce, #a855f7, #7e22ce); 
+  background: linear-gradient(90deg, #a855f7, #6f1fb4, #4d2d6b, #3c2650); 
   background-size: 200% 100%;
   background-repeat: no-repeat;
   animation: gradient-move-x 6s forwards;
@@ -78,17 +78,17 @@
 
 
 @layer base {
-  :root {
+  /* :root {
     --background: 210 40% 98%;
     --foreground: 222 47% 5%;
-    --card: 0 0% 100%;
+    --card: 0 0% 95%;
     --primary: 250 47% 60%;
     --primary-foreground: 210 40% 98%;
     --border: 214 32% 91%;
     --btn-col: #000;
-  }
+  } */
 
-  .dark {
+  :root {
     --background: 210 47% 4%;
     --foreground: 213 31% 91%;
     --card: 227 47% 8%;
@@ -177,6 +177,11 @@
 .circle {
   @apply absolute rounded-full bg-white;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+.roboto{
+  font-family: 'Roboto Mono', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
 }
 
 #root {
