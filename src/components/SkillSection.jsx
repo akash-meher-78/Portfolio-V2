@@ -9,7 +9,6 @@ function SkillSection() {
     "TailwindCSS",
     "MongoDB",
     "Node.js",
-    "MySQL",
   ];
 
 
