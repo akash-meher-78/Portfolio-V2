@@ -1,4 +1,10 @@
-import { Github, Link } from "lucide-react";
+import {
+  ExternalLink,
+  Github,
+  Link,
+  SquareArrowOutUpRight,
+} from "lucide-react";
+
 
 const projects = [
   {
@@ -6,22 +12,35 @@ const projects = [
     title: "Saas Landing Page",
     description:
       "A modern SaaS landing page built with Next.js and Tailwind CSS, featuring a responsive design and smooth animations.",
-    image: "/projects/project1.jpg",
+    image: "/projects/SaasLandingPage.png",
     tags: [
-      "Html",
       "Tailwind CSS",
       "React",
-      "MongoDB",
-      "Node.js",
-      "Epress",
-      "Shadcn",
       "Farmer Motion",
     ],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://saas-landing-page-iota-one.vercel.app/",
+    githubUrl: "https://github.com/akash-meher-78/SaaS-Landing-Page",
+    date: "July 2025",
+    status: "Completed",
   },
   {
-    id: 1,
+    id: 2,
+    title: "Old Portfolio",
+    description:
+      "A modern SaaS landing page built with Next.js and Tailwind CSS, featuring a responsive design and smooth animations.",
+    image: "/projects/oldPortfolio.png",
+    tags: [
+      "Html",
+      "CSS",
+      "JavaScript",
+    ],
+    date: "July 2025",
+    demoUrl: "https://portfolio-snowy-ten-40.vercel.app/",
+    githubUrl: "https://github.com/akash-meher-78/Portfolio-basic",
+    status: "Completed",
+  },
+  {
+    id: 3,
     title: "Saas Landing Page",
     description:
       "A modern SaaS landing page built with Next.js and Tailwind CSS, featuring a responsive design and smooth animations.",
@@ -38,31 +57,14 @@ const projects = [
     ],
     demoUrl: "#",
     githubUrl: "#",
-  },
-  {
-    id: 1,
-    title: "Saas Landing Page",
-    description:
-      "A modern SaaS landing page built with Next.js and Tailwind CSS, featuring a responsive design and smooth animations.",
-    image: "/projects/project1.jpg",
-    tags: [
-      "Html",
-      "Tailwind CSS",
-      "React",
-      "MongoDB",
-      "Node.js",
-      "Epress",
-      "Shadcn",
-      "Farmer Motion",
-    ],
-    demoUrl: "#",
-    githubUrl: "#",
+    date: "July 2025",
+    status: "Completed",
   },
 ];
 
 function ProjectSection() {
   return (
-    <section id="projects" className="py-24 px-4 relative roboto">
+    <section id="projectsLink" className="py-24 px-4 relative roboto ">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">Proof of Work</h2>
@@ -79,9 +81,9 @@ function ProjectSection() {
           {projects.map((project, key) => (
             <div
               key={key}
-              className="group w-full sm:w-[80%] bg-card mb-5 rounded-lg overflow-hidden shadow-xs border border-border flex flex-col mx-auto"
+              className="  group w-full sm:w-[80%] bg-card mb-5 rounded-lg overflow-hidden shadow-xs border border-border flex flex-col mx-auto"
             >
-              <div className="h-40 w-full overflow-hidden">
+              <div className="h-50 w-full overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -93,17 +95,19 @@ function ProjectSection() {
                   <h3 className="text-lg sm:text-2xl font-bold font-mono mb-0 lowercase break-words">
                     {project.title}
                   </h3>
+                </div>
+                <div className="flex items-center justify-between mb-2 gap-2 flex-wrap">
+                  {project.date && (
+                    <div className="text-xs sm:text-sm text-muted-foreground mb-2 font-mono">
+                      {project.date}
+                    </div>
+                  )}
                   {project.status && (
-                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 sm:px-3 py-1 rounded-full">
+                    <span className="bg-green-100 text-green-700 text-xs font-semibold px-2 sm:px-3 py-2 rounded-md">
                       {project.status}
                     </span>
                   )}
                 </div>
-                {project.date && (
-                  <div className="text-xs sm:text-sm text-muted-foreground mb-2 font-mono">
-                    {project.date}
-                  </div>
-                )}
                 <p className="text-xs sm:text-base text-muted-foreground mb-4 font-mono">
                   {project.description}
                 </p>
@@ -121,17 +125,15 @@ function ProjectSection() {
                   <a
                     href={project.demoUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="bg-black text-white px-3 sm:px-4 py-2 rounded font-mono font-semibold flex items-center gap-2 text-xs sm:text-sm hover:bg-primary transition"
                   >
-                    <Link />
+                    <SquareArrowOutUpRight />
                     <span>Website</span>
                   </a>
                   <a
                     href={project.githubUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-muted text-foreground px-3 sm:px-4 py-2 rounded font-mono font-semibold flex items-center gap-2 text-xs sm:text-sm border border-border hover:bg-primary hover:text-white transition"
+                    className=" bg-muted text-foreground px-3 sm:px-4 py-2 rounded font-mono font-semibold flex items-center gap-2 text-xs sm:text-sm border border-border hover:bg-primary hover:text-white transition"
                   >
                     <Github />
                     <span>Source</span>
@@ -140,6 +142,12 @@ function ProjectSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <a className="px-6 py-3 border rounded-xl bg-slate-700 text-white hover:bg-slate-600  font-bold cursor-pointer">
+            View All
+          </a>
         </div>
       </div>
     </section>

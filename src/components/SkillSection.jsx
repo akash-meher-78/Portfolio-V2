@@ -26,7 +26,8 @@ function SkillSection() {
                     {skills.map((skill) => (
                         <span
                             key={skill}
-                            className="bg-black text-primary-foreground rounded-[10px] px-4 py-3 text-sm font-mono font-medium hover:scale-105"
+                            className="bg-transparent border text-primary-foreground rounded-[10px] px-4 py-3 text-sm font-mono font-medium hover:scale-105"
+
                         >
                             {skill}
                         </span>
@@ -38,4 +39,4 @@ function SkillSection() {
   )
 }
 
-export default SkillSection
+export default SkillSection;

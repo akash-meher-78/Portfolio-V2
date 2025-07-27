@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 const navItem = [
   { title: "Home", href: "#home" },
   { title: "Skills", href: "#skills" },
-  { title: "Project", href: "#projects" },
-  { title: "Contact", href: "#contact" },
+  { title: "Project", href: "#projectsLink" },
+  { title: "Contact", href: "#getInTouch" },
 ];
 
 function Navbar() {
@@ -22,7 +22,6 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Optional: Lock scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isMenu ? "hidden" : "auto";
   }, [isMenu]);
@@ -42,14 +41,14 @@ function Navbar() {
         className={cn(
           "fixed w-full transition-all duration-300",
           isScroll
-            ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
+            ? "py-3 bg-background/80 backdrop-blur-md shadow-xs "
             : "py-5"
         )}
       >
-        <div className="container flex items-center justify-center gap-4 px-4 md:px-6">
+        <div className="container flex items-center justify-between gap-4 px-4 md:px-6">
           {/* Left: Logo */}
           <a
-            className="text-xl font-bold text-primary flex items-center mr-auto"
+            className="text-xl font-bold text-primary flex items-center"
             href="#home"
           >
             <span className="relative z-10">
@@ -61,8 +60,8 @@ function Navbar() {
             </span>
           </a>
 
-          {/* Desktop Nav */}
-          <div className="hidden font-semibold md:flex space-x-8 justify-center flex-1">
+          {/* Desktop Nav - now right aligned */}
+          <div className="hidden font-semibold md:flex space-x-8 ml-auto">
             {navItem.map((item, key) => (
               <a
                 key={key}
@@ -75,8 +74,8 @@ function Navbar() {
             ))}
           </div>
 
-          {/* Right: Mobile Menu Toggle */}
-          <div className="flex items-center gap-4 ml-auto">
+          
+          <div className="flex items-center gap-4">
             <button
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className="md:hidden p-2 ml-2 z-[100] text-foreground"
