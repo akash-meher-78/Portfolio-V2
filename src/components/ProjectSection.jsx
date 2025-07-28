@@ -34,7 +34,7 @@ const projects = [
       "CSS",
       "JavaScript",
     ],
-    date: "July 2025",
+    date: "Jan 2025",
     demoUrl: "https://portfolio-snowy-ten-40.vercel.app/",
     githubUrl: "https://github.com/akash-meher-78/Portfolio-basic",
     status: "Completed",

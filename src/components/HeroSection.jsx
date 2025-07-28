@@ -16,9 +16,10 @@ function HeroSection() {
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center px-0 w-full"
     >
-      {/* Top Hero Content */}
+      
       <div className="w-full max-w-screen-xl mx-auto text-center z-10 mt-10 px-4">
         <div className="space-y-6 mt-10 roboto">
+          <h1 className="bg-white roboto text-red-600 rounded-lg">Under Construction</h1>
           <h1
             className="z-10 text-center font-mono bg-clip-text bg-gradient-to-b from-neutral-50 to-neutral-400 
              text-4xl sm:text-2xl md:text-5xl lg:text-7xl max-sm:text-[22px] max-[450px]:text-2xl 
@@ -26,7 +27,7 @@ function HeroSection() {
           >
             Hey! I am Akash Meher, a{" "}
             <span className="relative mt-2 inline-block px-1 pb-1 rounded-lg animate-gradient-x ">
-              Frontend Developer.
+              FullStack Developer.
             </span>
           </h1>
 
