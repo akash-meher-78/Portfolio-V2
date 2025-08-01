@@ -3,11 +3,10 @@ function SkillSection() {
     const skills = [
     "JavaScript",
     "C++",
-    "Next.js",
     "React",
-    "TypeScript",
     "TailwindCSS",
-    "MongoDB",
+    "HTML",
+    "CSS",
     "Node.js",
   ];
 
